@@ -1,0 +1,19 @@
+syntax = 'proto3';
+package sum;
+
+message Numbers{
+  string num1 = 1;
+  string num2 = 2;
+}
+
+message SumRequest{
+  Numbers numbers = 1;
+}
+message  SumResponse{
+  string  result = 1;
+}
+
+service SumService{
+  //unary api
+  rpc Sum(SumRequest) returns (SumResponse){};
+}
