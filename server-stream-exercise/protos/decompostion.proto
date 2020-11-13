@@ -1,0 +1,14 @@
+syntax = 'proto3';
+package decomposition;
+
+service DecompositionService{
+  // stream api
+  rpc GetFactor(DecompositionRequest) returns (stream DecompositionResponse){};
+}
+
+message DecompositionRequest{
+  string num = 1;
+}
+message DecompositionResponse{
+  string result = 1;
+}

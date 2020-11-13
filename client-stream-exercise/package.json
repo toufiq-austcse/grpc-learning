@@ -1,0 +1,11 @@
+{
+  "name": "client-stream-exercise",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "google-protobuf": "^3.14.0-rc.3",
+    "grpc": "^1.24.4",
+    "nodemon": "^2.0.6"
+  }
+}

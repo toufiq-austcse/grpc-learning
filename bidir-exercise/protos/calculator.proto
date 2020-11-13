@@ -1,0 +1,14 @@
+syntax = 'proto3';
+package calculator;
+
+message FindMaximumRequest{
+  int64 num = 1;
+}
+
+message FindMaximumResponse{
+  int64 result = 1;
+}
+
+service FindMaximumService{
+  rpc FindMaximum(stream FindMaximumRequest) returns (stream FindMaximumResponse){};
+}
