@@ -19,6 +19,10 @@ function findMaximum(call, callback) {
         console.log(error);
     });
     call.on('end', () => {
+        let response = new calculators.FindMaximumResponse();
+        response.setResult(max);
+        call.write(response);
+        call.end();
         console.log('Bidi End');
     });
 }

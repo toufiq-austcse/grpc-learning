@@ -1,0 +1,15 @@
+syntax = "proto3";
+package calculator;
+
+service CalculatorService{
+  // Error Handling
+  // this rpc will throw exception if the sent number is negative : -1
+  rpc SquareRoot(SquareRootRequest) returns(SquareRootResponse){};
+}
+
+message SquareRootRequest{
+  int32 number = 1;
+}
+message SquareRootResponse{
+  double number_root = 1;
+}
